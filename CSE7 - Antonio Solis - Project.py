@@ -15,17 +15,7 @@ class Room():
         '''
         global node 
         node = globals()[getattr(self, direction)]
-crowbar_attack = random.randint(1,20)
-class Crowbar():
-    def __init__(self,name):
-        self.name = name 
-        self.attack = crowbar_attack
-        self.durability = 100
-    def attack(self,name):
-        self.attack
-        self.durability = -8
-        print "You did %d damage!" %self.attack
-my_crowbar = Crowbar('Antonio\'s Crowbar')
+
         
 front_gate = Room('Front Gate', 'front_yard', None, None, None, None, \
  None, "You are at the entrance of BuckeBerry, a mysterious new structure that was built ten years without any information and only allows employees in. You could only go north, to the front yard.")
@@ -40,12 +30,14 @@ parking_lot = Room('Parking Lot', None, None, None, 'front_yard', None,\
 None, "There is a lot of cars here but nobody in sight. The only way out is east, back to the front yard.")
 
 waiting_room = Room('Waiting Room', 'elevator', 'front_yard','office_a', \
-'office_b', None, None, 'The waiting room is empty with the ')
+'office_b', None, None, 'The waiting room is empty with the source of light flickering on top of you. North of you is an elevator, west of you is an office as well as to the east.') 
 
 office_a = Room('Office A', None, None, None, 'waiting_room', None, \
-None, "rojnforinf")
+None, "There is nobody here and it is dark as well. This weird red glowing thing is on the wall. The only way out is back east, the waiting room.")
 
-office_b = Room('Office B', None,None,None,None,None,None,'ddff')
+office_b = Room('Office B', None,None,'waiting_room',None,None,'tunnel1','There is a wierd red glowing thing on the wall and nobody is in here as well. There is also a trapdoor on the ground wide open in to the darkness. To the west is the waiting room and down is a tunnel.')
+
+tunnel1 = Room('Tunnel',None,None,None,'tunnel2','office_b',None,'It is dark, the only light )
 
 node = front_gate
 
